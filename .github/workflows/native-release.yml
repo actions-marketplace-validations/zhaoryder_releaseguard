@@ -15,7 +15,7 @@ jobs:
       run:
         working-directory: native/macos/ReleaseGuardMac
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7.0.1
       - uses: swift-actions/setup-swift@v2
         with:
           swift-version: "5.10"
@@ -46,7 +46,7 @@ jobs:
       run:
         working-directory: native/windows/ReleaseGuard.WinUI
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7.0.1
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: "8.0.x"
@@ -63,7 +63,7 @@ jobs:
       run:
         working-directory: native/linux/releaseguard-gtk
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7.0.1
       - run: sudo apt-get update && sudo apt-get install -y libgtk-4-dev
       - uses: dtolnay/rust-toolchain@stable
       - run: cargo build --release
