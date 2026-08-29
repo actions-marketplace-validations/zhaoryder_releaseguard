@@ -22,7 +22,7 @@ jobs:
             command: npx electron-builder --linux AppImage deb --x64 --arm64 --publish never
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7.0.1
       - uses: actions/setup-node@v4
         with:
           node-version: 22
