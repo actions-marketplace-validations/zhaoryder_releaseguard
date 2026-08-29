@@ -47,7 +47,7 @@ jobs:
         working-directory: native/windows/ReleaseGuard.WinUI
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v4
+      - uses: actions/setup-dotnet@v6
         with:
           dotnet-version: "8.0.x"
       - run: dotnet publish -c Release -r win-x64 --self-contained true -o publish-x64
